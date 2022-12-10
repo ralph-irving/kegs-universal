@@ -364,8 +364,6 @@ x_badpipe(int signum)
 	/* restore normal sigpipe handling */
 	signal(SIGPIPE, SIG_DFL);
 
-	/* attempt to xset r */
-	system("xset r");
 	my_exit(5);
 }
 
