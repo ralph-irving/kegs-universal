@@ -285,6 +285,7 @@ void scc_socket_do_answer(int port, double dcycs);
 void iwm_init_drive(Disk *dsk, int smartport, int drive, int disk_525);
 void disk_set_num_tracks(Disk *dsk, int num_tracks);
 void iwm_init(void);
+void iwm_shut(void);
 void iwm_reset(void);
 void draw_iwm_status(int line, char *buf);
 void iwm_flush_disk_to_unix(Disk *dsk);

@@ -600,6 +600,7 @@ void
 my_exit(int ret)
 {
 	end_screen();
+	iwm_shut();
 	printf("exiting\n");
 	exit(ret);
 }

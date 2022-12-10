@@ -166,6 +166,20 @@ iwm_init()
 	iwm_reset();
 }
 
+void iwm_shut()      {
+  int i;
+  for(i = 0; i < 2; i++) {
+    eject_disk(&iwm.drive525[i]);
+    eject_disk(&iwm.drive35[i]);
+  }
+
+  for(i = 0; i < MAX_C7_DISKS; i++) {
+    eject_disk(&iwm.smartport[i]);
+  }
+
+  from_disk_byte_valid = 0;
+}
+
 void
 iwm_reset()
 {
