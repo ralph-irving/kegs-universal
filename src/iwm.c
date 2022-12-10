@@ -552,7 +552,6 @@ iwm525_phase_change(int drive, int phase)
 
 	qtr_track += delta;
 	if(qtr_track < 0) {
-		printf("GRIND...GRIND...GRIND\n");
 		qtr_track = 0;
 		last_phase = 0;
 	}
